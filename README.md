@@ -61,11 +61,11 @@ By default, the Docker image provided with Zephyrus includes [MailCatcher](https
 
 To access MailCatcher: http://localhost:1080/
 
-```textmate
+```yml
 mailer:
   transport: "smtp"
-  from_address: "info@ophelios.com"
-  from_name: "Zephyrus"
+  default_from_address: "info@ophelios.com"
+  default_from_name: "Zephyrus"
   smtp:
     enabled: true
     host: "localhost"
