@@ -1,5 +1,3 @@
-{varType \stdClass $i18n_javascript}
-
 {import ../pulsar/components/flash.latte}
 {import ../pulsar/components/undraw.latte}
 {import ../pulsar/components/alert.latte}
@@ -34,36 +32,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {include components/favicon.latte}
     {block meta}{/block}
-
     <title>Boilerplate</title>
-
-    {* FONTS *}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700" rel="stylesheet" />
-
-    {* FRAMEWORK *}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.4.0/dist/css/tabler.min.css" />
-
-    {* ICONOGRAPHY *}
-    <link rel="stylesheet" href="{asset('/stylesheets/vendor/bootstrap-icons-1.11.1/bootstrap-icons.min.css')}">
-    <link rel="stylesheet" href="{asset('/stylesheets/vendor/fontawesome-6.2.1/css/all.min.css')}">
-
-    {* COMPONENTS *}
-    <link rel="stylesheet" href="{asset('/stylesheets/pulsar/components/undraw.css')}">
-    <link rel="stylesheet" href="{asset('/stylesheets/pulsar/components/modals.css')}">
-    <link rel="stylesheet" href="{asset('/stylesheets/pulsar/components/offcanvas.css')}">
-    <link rel="stylesheet" href="{asset('/stylesheets/pulsar/components/icon-picker.css')}">
-    <link rel="stylesheet" href="{asset('/stylesheets/components/body.css')}">
-
-    {* Application JS *}
-    <script type="module" nonce="{nonce()}">
-        import Application from "/javascripts/app.js";
-        window.app = new Application({
-            i18n: {$i18n_javascript|noescape}
-        });
-        window.app.initialize();
-    </script>
+    {include components/stylesheets.latte}
+    {include components/javascripts.latte}
     {block css}{/block}
 </head>
 <body>
