@@ -1,14 +1,6 @@
 # ----------------------------- ERROR HANDLING ------------------------------ #
-php_flag html_errors on
-php_flag log_errors on
-php_flag ignore_repeated_errors on
-php_flag ignore_repeated_source on
-php_flag report_memleaks on
-php_flag track_errors on
-php_value docref_root 0
-php_value docref_ext 0
-php_value error_reporting -1
-php_value log_errors_max_len 0
+php_flag display_errors Off
+php_value error_reporting 0
 
 # ---------------------------- XDEBUG PROFILING ----------------------------- #
 php_value xdebug.start_with_request no
